@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Modern Web Guidance: enable native height/size animation for intrinsic sizing */
+  interpolate-size: allow-keywords;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Custom Scrollbar for refined desktop view */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4A5AD;
+  border-radius: 9999px;
+  border: 2px solid #FAF8F8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7F1728;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Leaflet custom map styling adjustments */
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(127, 23, 40, 0.12);
+  padding: 4px;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-family: inherit;
+}
+
+.leaflet-container {
+  font-family: inherit;
+  z-index: 10;
+}

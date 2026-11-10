@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, MapPin, ShieldAlert, ArrowUp } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -131,14 +132,27 @@ export const Footer: React.FC = () => {
             <span>Última revisão do conteúdo: <strong>Novembro de 2026</strong></span>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-right">
+          <div className="flex flex-col sm:flex-row items-center gap-2.5 text-center sm:text-right">
             <span>
               Projeto de Extensão Universitária — <strong>Universidade UMC</strong> (ADS)
             </span>
             <span className="hidden sm:inline text-white/30">•</span>
-            <span className="text-white font-semibold">
-              Desenvolvido por Gabriel Rodrigues
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-white font-semibold">
+                Desenvolvido por Gabriel Rodrigues
+              </span>
+              <a
+                href="https://wa.me/5511988423693?text=Ol%C3%A1%2C%20vi%20seu%20portal%20informativo%20sobre%20doa%C3%A7%C3%A3o%20de%20sangue%20em%20Mogi%20das%20Cruzes%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20seu%20trabalho"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] font-bold shadow-sm transition-all duration-200 hover:scale-105"
+                title="Contato no WhatsApp com Gabriel Rodrigues: +55 (11) 98842-3693"
+                aria-label="Contato no WhatsApp com o desenvolvedor Gabriel Rodrigues: +55 (11) 98842-3693"
+              >
+                <WhatsAppIcon className="w-3.5 h-3.5 fill-white" />
+                <span>WhatsApp</span>
+              </a>
+            </div>
           </div>
         </div>
 

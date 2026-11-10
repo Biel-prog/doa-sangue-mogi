@@ -12,7 +12,6 @@ import { FaqSection } from './components/FaqSection';
 import { OfficialSources } from './components/OfficialSources';
 import { CampaignBanner } from './components/CampaignBanner';
 import { Footer } from './components/Footer';
-import { DeveloperContactBadge } from './components/DeveloperContactBadge';
 
 export const App: React.FC = () => {
   return (
@@ -58,9 +57,6 @@ export const App: React.FC = () => {
 
       {/* Institutional Footer */}
       <Footer />
-
-      {/* Floating Developer WhatsApp Contact Badge */}
-      <DeveloperContactBadge />
     </div>
   );
 };
